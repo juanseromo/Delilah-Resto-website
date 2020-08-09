@@ -1,6 +1,6 @@
 body {
     font-family: "Helvetica Neue", Helvetica, sans-serif;
-    width: 600px;
+    width: auto;
     margin: 0 auto;
 }
 header {
@@ -11,7 +11,7 @@ header {
 h1 {
     color: white;
     line-height: 150px;
-
+    text-align: center;
 }
 
 #login {
