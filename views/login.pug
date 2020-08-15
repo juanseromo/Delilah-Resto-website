@@ -1,0 +1,22 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' type='text/css' href='css/style.css')
+  title Delilah Resto Login
+header
+  h1 Delilah Restor
+form#login(action='/login' method='post')
+  ul
+    li
+      label(for='username')
+        | Usuario o email: 
+        abbr(title='required' aria-label='required') *
+      input#username(type='text' name='username')
+    li
+      label(for='password')
+        | Contrase&ntilde;a: 
+        abbr(title='required' aria-label='required') *
+      input#password(type='password' name='password')
+  button.button(type='submit') INICIAR SESI&Oacute;N
+  button.registerButton(type='button') REGISTRARSE
