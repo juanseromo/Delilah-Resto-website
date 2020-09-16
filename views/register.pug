@@ -6,7 +6,7 @@ head
   title Delilah Resto Registration
 header
   h1 Delilah Restor
-form#login(action='/register' method='post')
+form#login(action='/registrar/nvo-user' method='post')
     ul
         li
             label(for='username')
@@ -34,5 +34,5 @@ form#login(action='/register' method='post')
                 abbr(title='required' aria-label='required') *
             input#password(type='password' name='password')
 
-    button.button(type='submit') CREAR CUENTA
-    button.registerButton(type='button') INICIAR SESIÓN
+    button#register(type='submit') CREAR CUENTA
+    button#boton(type='button') INICIAR SESIÓN

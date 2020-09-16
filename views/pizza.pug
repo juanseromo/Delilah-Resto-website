@@ -1,0 +1,76 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' type='text/css' href='css/style.css')
+  title Delilah Resto Login
+header
+  h1 Delilah Restor
+form
+  p
+    label
+      | Customer name: 
+      input
+  p
+    label
+      | Telephone: 
+      input(type='tel')
+  p
+    label
+      | E-mail address: 
+      input(type='email')
+  fieldset
+    legend  Pizza Size 
+    p
+      label
+        input(type='radio' name='size')
+        |  Small
+    p
+      label
+        input(type='radio' name='size')
+        |  Medium
+    p
+      label
+        input(type='radio' name='size')
+        |  Large
+  fieldset
+    legend  Pizza Toppings 
+    p
+      label
+        input(type='checkbox')
+        |  Bacon
+    p
+      label
+        input(type='checkbox')
+        |  Extra Cheese
+    p
+      label
+        input(type='checkbox')
+        |  Onion
+    p
+      label
+        input(type='checkbox')
+        |  Mushroom
+  p
+    label
+      | Preferred delivery time: 
+      input(type='time' min='11:00' max='21:00' step='900')
+  p
+    label
+      | Delivery instructions: 
+      textarea
+  p
+    button Submit order
+
+
+    form#fileinfo(enctype='multipart/form-data' method='post' name='fileinfo')
+  label Your email address:
+  input(type='email' autocomplete='on' autofocus='' name='userid' placeholder='email' required='' size='32' maxlength='64')
+  br
+  label Custom file ID:
+  input(type='text' name='fileid' size='12' maxlength='32')
+  br
+  label File to stash:
+  input(type='file' name='file' required='')
+#output
+a(href='javascript:sendForm()') Stash the file!

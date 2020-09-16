@@ -9,14 +9,14 @@ header
 form#login(action='/login' method='post')
   ul
     li
-      label(for='username')
+      label(for='usuario')
         | Usuario o email: 
         abbr(title='required' aria-label='required') *
-      input#username(type='text' name='username')
+      input#usuario(type='text' name='usuario')
     li
-      label(for='password')
+      label(for='hash')
         | Contrase&ntilde;a: 
         abbr(title='required' aria-label='required') *
-      input#password(type='password' name='password')
-  button.button(type='submit') INICIAR SESI&Oacute;N
-  button.registerButton(type='button') REGISTRARSE
+      input#hash(type='password' name='hash')
+  button#register(type='submit') INICIAR SESI&Oacute;N
+  button#boton(type='button') REGISTRARSE
