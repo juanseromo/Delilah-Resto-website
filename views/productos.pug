@@ -6,11 +6,17 @@ head
   title Delilah Resto - Lista de Productos
 header#productHeader 
   h2 Delilah Restor
-section.prodList
-    div
-        h3 Hamburguers
-    div
-        h3 Perros Calientes
+div
+  a(href='../productos/admin') Administrar Productos
+  a.logout( href='/login/logout') Cerrar Sesion
+
+- 
+const obj = #{productos}
+const length = obj.length
+
+.prodList 
+  div #{productos}
+  h1 = productos
 
 .productNav
     h5 + Crear

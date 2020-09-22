@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    margin: 0 auto;
+}
+header {
+    width: auto;
+    height: 150px;
+    background-color: #3ADDDA;
+}
+#select {
+    width: 300px;
+    margin: 30px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid;
+}
+#productHeader {
+    height: 100px;
+}
+
+#login ul{
+    list-style: none;
+    padding: 0;
+}
+#login input{
+    height: 30px;
+    
+}
+form {
+    margin: auto;
+    padding: auto;
+    align-content: center;
+}
+.contPO {
+    margin: 0 auto;
+    padding: 20px;
+}
+.field {
+    width: auto;
+    margin: 10px auto;
+    display: flex;
+    align-content: left;
+    flex-flow: column;
+}
+h1 {
+    margin: 0;
+    color: white;
+    line-height: 150px;
+    text-align: center;
+}
+.check {
+    width: auto;
+    height: auto;
+    margin: auto;
+    margin-top: 10px;
+    display: flex;
+    align-content: space-between;
+    justify-content: left;
+    flex-flow: row;
+}
+label {
+    /* Tamaño y alineación uniforme */
+    width: auto;
+    text-align: left;
+    color: grey;
+    font: .9em sans-serif;
+    list-style: none;
+    line-height: 30px;
+}
+input, textarea {
+    font: 1em sans-serif;
+
+    /* Tamaño uniforme del campo de texto */
+    height: 30px;
+    width: 200px;
+    box-sizing: border-box;
+    margin-top: 5px;
+    padding: 10px;
+
+    border-radius: 5px;
+    border-style: none;
+    border: 1px solid grey;
+}
+input[type="checkbox"] {
+    height: 30px;
+    width: 30px;
+    padding-left: 10px;
+    margin: 0;
+}
+input:focus, 
+textarea:focus {
+  /* Destacado adicional para elementos que tienen el cursor */
+  border-color: rgb(253, 129, 232);
+  padding: 10px;
+}
+.inp {
+    /* Para asegurarse de que todos los campos de texto tienen la misma configuración de letra
+        Por defecto, las áreas de texto tienen un tipo de letra monoespaciada */
+    font: 1em sans-serif;
+
+    /* Tamaño uniforme del campo de texto */
+    height: 40px;
+    width: 200px;
+    box-sizing: border-box;
+    padding: auto;
+
+    margin-top: 10px;
+    border-radius: 5px;
+
+    border-style: none;
+    border: 1px solid grey;
+    /* Hacer coincidir los bordes del campo del formulario */
+}
+
+fieldset{
+    margin-top:20px;
+    padding: 0 20px 20px 20px;
+
+}
+#boton {
+    /* Alinear los botones con los campos de texto */
+    padding: 0 20; /* mismo tamaño que los elementos de la etiqueta */
+    font: .9em sans-serif;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #FC885C;
+    color: white;
+    border-style: none;
+    width: 150px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.boton {
+    /* Alinear los botones con los campos de texto */
+    padding: 10px 20px; /* mismo tamaño que los elementos de la etiqueta */
+    font: .9em sans-serif;
+    height: auto;
+    border-radius: 25px;
+    background-color: #FC885C;
+    color: white;
+    border-style: none;
+    width: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    list-style: none;
+    text-decoration: none;
+    line-height: 30px;
+    text-align: center;
+}  

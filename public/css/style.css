@@ -52,6 +52,24 @@ h2 {
     margin-top: 20px;
     margin-bottom: 20px;
 }  
+.boton {
+    /* Alinear los botones con los campos de texto */
+    padding: 10px 20px; /* mismo tamaño que los elementos de la etiqueta */
+    font: .9em sans-serif;
+    height: auto;
+    border-radius: 25px;
+    background-color: #FC885C;
+    color: white;
+    border-style: none;
+    width: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    list-style: none;
+    text-decoration: none;
+    line-height: 30px;
+    text-align: center;
+}  
+
 #register {
     /* Alinear los botones con los campos de texto */
     padding: 0 20; /* mismo tamaño que los elementos de la etiqueta */
@@ -63,10 +81,26 @@ h2 {
     border-style: none;
     width: 150px;
     margin-top: 10px;
-}  
+}
+form {
+    margin: auto;
+    padding: auto;
+    align-content: center;
+}
+/*
 form li + li {
     margin-top: 10px;
-    
+}*/
+.contPO {
+    margin: 0 auto;
+    padding: 20px;
+}
+.field {
+    width: auto;
+    margin: 0 auto;
+    display: flex;
+    align-content: left;
+    flex-flow: column;
 }
 label {
     /* Tamaño y alineación uniforme */
@@ -76,6 +110,7 @@ label {
     color: grey;
     font: .9em sans-serif;
     margin-top: 10px;
+    list-style: none;
 }
 input, textarea {
     /* Para asegurarse de que todos los campos de texto tienen la misma configuración de letra
@@ -83,25 +118,23 @@ input, textarea {
     font: 1em sans-serif;
 
     /* Tamaño uniforme del campo de texto */
-    height: 100px;
-    width: 300px;
+    height: 40px;
+    width: 200px;
     box-sizing: border-box;
     margin-top: 10px;
     padding: 10px;
 
-    border-radius: 10px;
+    border-radius: 5px;
     border-style: none;
     border: 1px solid grey;
 
     /* Hacer coincidir los bordes del campo del formulario */
 }
-
 input:focus, 
 textarea:focus {
   /* Destacado adicional para elementos que tienen el cursor */
   border-color: rgb(253, 129, 232);
 }
-
 textarea {
   /* Alinear los campos de texto multilínea con sus etiquetas */
   vertical-align: top;
@@ -109,7 +142,6 @@ textarea {
   /* Proporcionar espacio para escribir texto */
   height: 5em;
 }
-
 .prodList{
     margin: 0 auto;
     padding: 20px;
@@ -119,7 +151,6 @@ textarea {
     align-items: center;
 
 }
-
 .productNav{
     margin: 0 auto;
     padding: 20px;
@@ -131,4 +162,8 @@ textarea {
 .productNav ul{
     list-style: none;
     padding: 0;
+}
+.flex {
+    display: flex;
+    flex-flow: column;
 }

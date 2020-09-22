@@ -1,0 +1,27 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' type='text/css' href='/css/po-styles.css')
+  title Selección de Pedido
+header
+  h1 Carrito de #{author}
+form#select(action='../pedidos/nuevo' method='post')
+  fieldset
+    p.field
+      label(for='usuario')
+        | Nombre del usuario:
+      input#usuario(type='text' name='usuario')
+    p.field
+      label(for='tel')
+        | Telefono: 
+      input#tel(type='tel' name='tel' )
+    p.field
+      label(for='email')
+        | E-mail address: 
+      input#email(type='email' name='email')
+    p.field
+      label(for='dir') Direccion de entrega
+        textarea#dir(type='textarea' name='dir')
+  
+  button.boton(type='submit') Enviar Datos

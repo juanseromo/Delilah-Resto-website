@@ -1,0 +1,37 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' type='text/css' href='/css/po-styles.css')
+  title Selección de Pedido
+header
+  h1 Carrito de #{author}
+form#select(action='../nuevo/productos' method='post')
+  
+  fieldset
+    h3 Seleccione los Productos para su nuevo pedido
+    p.check
+      input#hamb(type='checkbox' name='hamb')
+      label(for='hamb') Hamburguesa Clasica
+    p.check
+      input#sand(type='checkbox' name='sand')
+      label(for='sand') Sandwich
+    p.check
+      input#sandveg(type='checkbox' name='sandveg')
+      label(for='sandveg') Sandwich Veggie
+    p.check
+      input#bag(type='checkbox' name='bag')
+      label(for='bag') Bagel de Salmón
+    p.check
+      input#ens(type='checkbox' name='ens')
+      label(for='ens') Ensalada Veggie
+    p.check
+      input#vegav(type='checkbox' name='vegav')
+      label(for='vegav') Veggie Avocado
+    p.check
+      input#foc(type='checkbox' name='foc')
+      label(for='foc') Focaccia
+    p.check
+      input#sandfoc(type='checkbox' name='sandfoc')
+      label(for='sandfoc') Sandwich Focaccia
+  button#boton(type='submit') Enviar Datos
