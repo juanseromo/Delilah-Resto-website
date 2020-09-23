@@ -15,27 +15,42 @@ router.route('/')
         resp.forEach(item => {
           array.push(item.DESCRIPCION + ': ' + item.PRECIO + '<br>')
         })
-        res.status(200).send('<h1> Lista de productos <br></h1>' + array)
+        let tag = '<h1> Lista de productos <br></h1>'
+        res.status(200).send('<h1> Lista de productos <br></h1>' + array.join(""))
         //for each product, create a new div which has an ul with label and price,
       }).catch(error => {
         if (error) {
           res.status(404).send("productos no encontrados")
         }
       })
-    } catch (e){console.error(e)}
+    } catch (error) {
+      if (error) {
+        res.status(404).send("productos no encontrados")
+      }
+    }
   })
   .post( auth, (req, res) => {
     try {
       const prod = req.body;
       sequelize.query(
-        `INSERT INTO PRODUCTOS VALUES ( NULL , '${prod.product}', '${prod.disponible}', '${prod.price}')`,
-        res.sendStatus(201)
+        `INSERT INTO PRODUCTOS VALUES ( NULL , '${prod.DESCRIPCION}', 'si', '${prod.PRECIO}')`
       )
-    } catch (e){console.error(e)}
+      .then((resp) =>{
+        res.status(201).send('Producto creado')
+      })
+      .catch(error => {
+        if (error) {
+          res.status(404).send(error)
+        }
+      })
+    } catch (e){
+      if (e) {
+        console.log(e)}
+      }
   })
 
 router.get('/admin', auth, (req, res) => {
-    res.send('hello Admin')
+    res.send('hello Admin de productos<br/> Vaya a POSTMAN para agregar o editar productos')
 })
 
 router.post('/updt-prod', auth, (req, res) => {

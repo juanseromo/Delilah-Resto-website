@@ -19,6 +19,15 @@ header {
     align-items: center;
     border: 1px solid;
 }
+#selectProd {
+    width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid;
+}
 #productHeader {
     height: 100px;
 }
@@ -53,19 +62,32 @@ h1 {
     line-height: 150px;
     text-align: center;
 }
+#prods{
+    padding: 0;
+}
 .check {
     width: auto;
     height: auto;
     margin: auto;
     margin-top: 10px;
     display: flex;
-    align-content: space-between;
-    justify-content: left;
-    flex-flow: row;
+    line-height:30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    vertical-align: top;
+}
+.price{
+    display: flex;
+    align-items: center;
+    width: auto;
+    height: 30px;
+    margin-right: 10px;
+    line-height: 30px;
 }
 label {
     /* Tamaño y alineación uniforme */
     width: auto;
+    height: 30px;
     text-align: left;
     color: grey;
     font: .9em sans-serif;
@@ -91,6 +113,7 @@ input[type="checkbox"] {
     width: 30px;
     padding-left: 10px;
     margin: 0;
+    line-height:30px;
 }
 input:focus, 
 textarea:focus {
@@ -118,9 +141,8 @@ textarea:focus {
 }
 
 fieldset{
-    margin-top:20px;
+    height: auto;
     padding: 0 20px 20px 20px;
-
 }
 #boton {
     /* Alinear los botones con los campos de texto */
@@ -151,4 +173,7 @@ fieldset{
     text-decoration: none;
     line-height: 30px;
     text-align: center;
-}  
+}
+span {
+    text-align: right;
+}

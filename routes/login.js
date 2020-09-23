@@ -29,11 +29,11 @@ router.route('/')
         await bcrypt.compare(code, hash)
         .then( (result) => {
           if (result === true) {
-            const token = jwt.sign({usu,isA}, privateKey, { expiresIn: ms('20m') /* , algorithm:  "RS256" */  } )
+            const token = jwt.sign({usu,isA}, privateKey, { expiresIn: ms('30m') /* , algorithm:  "RS256" */  } )
         
-            res.cookie('jwtTok', token, { maxAge: ms('20m'), /* secure: true,*/ httpOnly: true  })
-            res.cookie('adm', isA, { expires: new Date(Date.now() + ms('20m')), httpOnly: true})
-            res.cookie('usu', usu, { expires: new Date(Date.now() + ms('20m')), httpOnly: true})
+            res.cookie('jwtTok', token, { maxAge: ms('30m'), /* secure: true,*/ httpOnly: true  })
+            res.cookie('adm', isA, { expires: new Date(Date.now() + ms('30m')), httpOnly: true})
+            res.cookie('usu', usu, { expires: new Date(Date.now() + ms('30m')), httpOnly: true})
             res.redirect('login/bienvenido')
 
           } else error
@@ -46,7 +46,7 @@ router.route('/')
       })
       .catch(error => {
         if (error) {
-          res.status(404).render('error', { title: 'Express' })
+          res.status(404).send('query did not work, you should turn DB on')
         }
       })
     } else {res.status(400).send('no data input')}
