@@ -12,21 +12,32 @@ En la carpeta del proyecto se encuentran otras carpetas, las cuales contienen ar
 Cada endpoint tiene una linea de comentario explicando su funcionalidad, los cuales también están explicados a continuación:
 
 Routes Folder:
+
 index.js
+
 	/:
+
 		.GET: Renderiza la pagina de de ingreso con usuario y contraseña creada en .PUG
+		
 	/registro:
+		
 		.GET: Renderiza la pagina de registro creada con .PUG.
+		
 		.POST: Cualquier usuario puede registrar un nuevo usuario en la DB.
 		
 		
 login.js
 	/login:
+	
 		.GET: Renderiza una pagina de ingreso con usuario y contraseña creada en .PUG
 		.POST: busqueda de usuario y autorización para ingresar al sitio web
+	
 	/login/bienvenido:
+	
 		.GET: sitio web de bienvenida cuando ya se ha autorizado el usuario, el cual muestra un menú que lleva a diferentes links.
+		
 	/login/logout:
+	
 		.GET: Elimina los diferentes cookies creados para autorización de usuarios por lo que se termina la sesion y lleva al link de inicio.
 
 
