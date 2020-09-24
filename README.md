@@ -22,11 +22,10 @@ index.js
 	/registro:
 		
 		.GET: Renderiza la pagina de registro creada con .PUG.
-		
-		.POST: Cualquier usuario puede registrar un nuevo usuario en la DB.
-		
+		.POST: Cualquier usuario puede registrar un nuevo usuario en la DB.		
 		
 login.js
+
 	/login:
 	
 		.GET: Renderiza una pagina de ingreso con usuario y contraseña creada en .PUG
@@ -40,29 +39,47 @@ login.js
 	
 		.GET: Elimina los diferentes cookies creados para autorización de usuarios por lo que se termina la sesion y lleva al link de inicio.
 
-
 productos.js
+
 	/productos:
+	
 		.GET: Cualquier usuario puede tener la lista de todos los productos activos en la base de datos
 		.POST: Un usuario autorizado puede insertar un nuevo producto a la DB
+		
 	/productos/admin:
+	
 		.GET: La actualización de productos se debe hacer desde POSTMAN ya que no se ha creado el frontend para esta parte.
+		
 	/productos/updt-prod:
+	
 		.POST: Usuario autorizado puede actualizar productos ya creados, se debe enviar un body con precio y producto para ser actualizados.
-	/productos/delete: Usuario autorizado puede eliminar productos enviando en POSTMAN un body con el producto a eliminar
+		
+	/productos/delete:
+		Usuario autorizado puede eliminar productos enviando en POSTMAN un body con el producto a eliminar
 		
 		
 pedidos.js
-	/pedidos
+
+	/pedidos:
+	
 		.GET: Redirige al sitio de administración de pedidos
+		
 	/pedidos/admin
+	
 		.GET: Solo usuarios autorizados pueden ingresar
+		
 		.POST: Usuarios autorizados pueden actualizar el estado de los pedidos
+		
 	/pedidos/nuevo
+	
 		.GET: Un usuario que ya ha sido logueado, puede comenzar a crear un nuevo PO, en este link ingresa sus datos de contacto.
+		
 		.POST: guarda un cookie con detalles de contacto del usuario que está creando el pedido.
+		
 	/pedidos/nuevo/productos
+	
 		.GET: Muestra la lista de todos los productos activos en la base de datos actualmente, si un producto nuevo fuera agregado se mostraría en esta lista. Además permite seleccionar productos y agregarlos al carrito de compra para después agregarlos al pedido.
+		
 		.POST: Se agrega el nuevo pedido a la base de datos y se muestra una nueva pagina web con el listado de productos seleccionados y datos de contacto ingresados.
 		
 
