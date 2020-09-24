@@ -6,15 +6,15 @@ const jwt = require('jsonwebtoken');
 const fs = require('fs');
 const cookieParser = require('cookie-parser');
 const ms = require('ms')
-
 const auth = require('../public/autz')
-
 const privateKey = fs.readFileSync('./public/private.key','utf8')
 
 router.route('/')
+  //PAGINA DE INGRESO CON USUARIO Y CONTRASEÑA
   .get((req, res) => {
     res.render('login', { title: 'Express' })
   })
+  //BUSQUEDA DE USUARIO Y AUTORIZACIÓN PARA INGRESAR AL SITIO WEB
   .post((req, res) => {
     let userId = req.body.usuario
     let password = req.body.hash
@@ -35,7 +35,6 @@ router.route('/')
             res.cookie('adm', isA, { expires: new Date(Date.now() + ms('30m')), httpOnly: true})
             res.cookie('usu', usu, { expires: new Date(Date.now() + ms('30m')), httpOnly: true})
             res.redirect('login/bienvenido')
-
           } else error
         })
         .catch(error => {
@@ -51,13 +50,12 @@ router.route('/')
       })
     } else {res.status(400).send('no data input')}
 })
-
+//SITIO WEB DE BIENVENIDA CUANDO YA SE HA AUTORIZADO EL USUARIO
 router.get('/bienvenido', auth, (req, res) => {
   const usr = req.cookies.usu
   res.render('bienvenida', { author: usr })
-  //res.status(200).send(`Bienvenido a Delilah_Restor ${req.body.usuario}, por favor seleccione sus productos`)
 })
-
+//DESLOGUEARSE
 router.get('/logout', (req, res) => {
   res.clearCookie('jwtTok')
   res.clearCookie('adm')

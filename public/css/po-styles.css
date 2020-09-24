@@ -41,13 +41,9 @@ header {
     
 }
 form {
-    margin: auto;
+    margin: 5px;
     padding: auto;
     align-content: center;
-}
-.contPO {
-    margin: 0 auto;
-    padding: 20px;
 }
 .field {
     width: auto;
@@ -85,7 +81,6 @@ h1 {
     line-height: 30px;
 }
 label {
-    /* Tamaño y alineación uniforme */
     width: auto;
     height: 30px;
     text-align: left;
@@ -96,8 +91,6 @@ label {
 }
 input, textarea {
     font: 1em sans-serif;
-
-    /* Tamaño uniforme del campo de texto */
     height: 30px;
     width: 200px;
     box-sizing: border-box;
@@ -125,8 +118,6 @@ textarea:focus {
     /* Para asegurarse de que todos los campos de texto tienen la misma configuración de letra
         Por defecto, las áreas de texto tienen un tipo de letra monoespaciada */
     font: 1em sans-serif;
-
-    /* Tamaño uniforme del campo de texto */
     height: 40px;
     width: 200px;
     box-sizing: border-box;
@@ -176,4 +167,40 @@ fieldset{
 }
 span {
     text-align: right;
+}
+
+#contPO {
+    margin: 0 auto;
+    padding: 20px;
+}
+.contBody {
+    width: auto;
+    height: auto;
+    padding: 5px;
+    margin: 5px;
+    margin-bottom: 10px;
+    border: solid #3ADDDA ;
+    display: flex;
+}
+.po{
+    margin: 10px;
+    
+}
+.par{
+    margin: 5px 12px;
+    border: solid 1px #FC885C;
+    padding: 5px 10px;
+}
+.stat{
+    padding: 5px 10px;
+    font: .7em sans-serif;
+    height: auto;
+    border-radius: 5px;
+    background-color: #FC885C;
+    color: white;
+    border-style: none;
+    width: auto;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
 }

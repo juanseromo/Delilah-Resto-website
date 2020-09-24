@@ -3,8 +3,8 @@ const router = express.Router();
 const auth = require('../public/autz')
 const sequelize = require('../public/javascripts/sqlz.js');
 
-//listar todos los productos
 router.route('/')
+  //listar todos los productos
   .get((req, res) => {
     try{
       sequelize.query(
@@ -29,71 +29,50 @@ router.route('/')
       }
     }
   })
+  //INSERTAR UN NUEVO PRODUCTO A LA BASE DE DATOS
   .post( auth, (req, res) => {
-    try {
-      const prod = req.body;
-      sequelize.query(
-        `INSERT INTO PRODUCTOS VALUES ( NULL , '${prod.DESCRIPCION}', 'si', '${prod.PRECIO}')`
-      )
-      .then((resp) =>{
-        res.status(201).send('Producto creado')
-      })
-      .catch(error => {
-        if (error) {
-          res.status(404).send(error)
-        }
-      })
-    } catch (e){
-      if (e) {
-        console.log(e)}
+    const prod = req.body;
+    sequelize.query(
+      `INSERT INTO PRODUCTOS VALUES ( NULL , '${prod.DESCRIPCION}', 'si', '${prod.PRECIO}')`
+    )
+    .then((resp) =>{
+      res.status(201).send('Producto creado')
+    })
+    .catch(error => {
+      if (error) {
+        res.status(404).send(error)
       }
+    })
   })
-
+//ADMINISTRADOR DE PRODUCTOS
 router.get('/admin', auth, (req, res) => {
     res.send('hello Admin de productos<br/> Vaya a POSTMAN para agregar o editar productos')
 })
-
+//ACTUALIZAR PRODUCTOS
 router.post('/updt-prod', auth, (req, res) => {
-  try {
-    const prod = req.body
-    console.log(prod)
-    sequelize.query(
-      `UPDATE PRODUCTOS SET PRECIO='${prod.precio}' WHERE DESCRIPCION='${prod.producto}'`, 
-      res.sendStatus(201)
-    ).catch(err => console.error)
-  } catch (e){console.error(e)}
+  const prod = req.body
+  console.log(prod)
+  sequelize.query(
+    `UPDATE PRODUCTOS SET PRECIO='${prod.precio}' WHERE DESCRIPCION='${prod.producto}'`, 
+    res.sendStatus(201)
+  ).catch(error => {
+    if (error) {
+      res.status(404).send(error)
+    }
+  })
 })
-
+//ELIMINAR PRODUCTOS
 router.delete('/delete', auth, (req, res) => {
-  try {
-    const prod = req.body
-    console.log(prod)
-    sequelize.query(
-      `DELETE FROM PRODUCTOS WHERE DESCRIPCION='${prod.producto}'`,
-      res.sendStatus(204)
-    ).catch(err => console.error)
-  } catch (e){console.error(e)}
+  const prod = req.body
+  console.log(prod)
+  sequelize.query(
+    `DELETE FROM PRODUCTOS WHERE DESCRIPCION='${prod.producto}'`,
+    res.sendStatus(204)
+  ).catch(error => {
+    if (error) {
+      res.status(404).send(error)
+    }
+  })
 })
 
 module.exports = exports = router
-
-/*FIND PRODUCTS */
-/*   res.render('productos', { title: 'Express' });
-      resp.find(x => {
-        for (let i = 0; i < x.length; i++) {
-          x[i].DESCRIPCION === 'panelas' ? console.log('found') : console.log('not this one')
-        }
-      })*/
-
-      /*resp.map(x => { 
-        for (let i = 0; i < x.length; i++) {
-          x[i].DESCRIPCION === 'panelas'
-          console.log('found')
-        }
-      })
-
-/autores/:id
-- GET: devuelve el autor con el id indicado
-- DELETE: elimina el autor con el id indicado
-- PUT: modifica el autor con el id indicado      
-*/

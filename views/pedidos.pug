@@ -1,0 +1,12 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' type='text/css' href='/css/po-styles.css')
+  title Selección de Pedido
+  script(src='/javascripts/pos.js')
+header
+  h1 Administrador @#{author}
+div#contPO
+  h2 Listado de pedidos a continuación
+  section !{contBody.join(' ')}
