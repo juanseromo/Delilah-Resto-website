@@ -1,10 +1,9 @@
-Adding a new PO: request the body from a form where user selects among the available products, PO status will be changed automatically when a request is made to the endpoint, according to status updated by the PO Admin
-
-
+Frontend Delilah Development with nodejs, express and pug.
 
 Este es el proyecto final del curso de DWFS de Acamica, en el cuál se crea una RESTfull API, para el restaurante Delilah Resto. Esta aplicación permite seleccionar el CRUD de productos los cuales son mostrados después en el frontEnd, si un producto o pedido nuevo es agregado será mostrado en su respectivo endpoint.
+Aunqué el frontend no era obligatorio preferí hacerlo para entender mucho mejor la unión entre el frontend y backend por medio de nodejs y express.
 
-Para inicializar el servidor se debe instalar la base de datos, la cual se encuentra en la carpeta "models". En el desarrollo se está usando MariaDB y MySql además como elección personal se decidió usar MySqlWorkbench para la creación y uso de la BD, pero puede usar el que mas prefiera. Una vez se haya instalado la BD puede inicializar el servidor desde la terminal usando "mysql.SERVER start".
+Para inicializar el servidor se debe instalar la base de datos, la cual se encuentra en la carpeta "models". En el desarrollo se está usando MariaDB y MySql además como elección personal se decidió usar MySqlWorkbench para la creación y uso de la DB, pero puede usar el que mas prefiera. Una vez se haya instalado la DB puede inicializar el servidor desde la terminal usando "mysql.SERVER start".
 
 Después desde su editor de texto preferido puede instalar los diferentes node_modules que se encuentran indicados en el "package.json". Una vez hecho esto comenzar el servidor con "npx nodemon" desde la terminal del proyecto.
 
