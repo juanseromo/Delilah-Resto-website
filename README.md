@@ -84,6 +84,9 @@ pedidos.js
 		
 		.POST: Se agrega el nuevo pedido a la base de datos y se muestra una nueva pagina web con el listado de productos seleccionados y datos de contacto ingresados.
 		
+	/pedidos/delete
+	
+		.DELETE: Se puede eliminar un pedido con el ID_PO en el req.body 
 
 
 	
