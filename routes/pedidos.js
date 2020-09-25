@@ -108,5 +108,18 @@ router.route('/nuevo/productos')
       }
     })
 })
+router.delete('/delete', auth, (req, res) => {
+  const prod = req.body
+  console.log(prod)
+  sequelize.query(
+    `DELETE FROM PEDIDOS WHERE ID_PO='${prod.id_po}'`
+  ).then((resp) => {
+    res.send('Pedido No. ' +`${prod.id_po}`+ ' ha sido eliminado')
+  }).catch(error => {
+    if (error) {
+      res.status(404).send(error)
+    }
+  })
+})
 
 module.exports = exports = router
