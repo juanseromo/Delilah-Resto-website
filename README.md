@@ -1,13 +1,9 @@
-https://juanseromo12.github.io/Delilah-Resto-website/
-
 <h1>Frontend Delilah Development with nodejs, express and pug.</h1>
 
 Este es el proyecto final del curso de DWFS de Acamica, en el cuál se crea una RESTfull API, para el restaurante Delilah Resto. Esta aplicación permite seleccionar el CRUD de productos los cuales son mostrados después en el frontEnd, si un producto o pedido nuevo es agregado será mostrado en su respectivo endpoint.
 Aunqué el frontend no era obligatorio preferí hacerlo para entender mucho mejor la unión entre el frontend y backend por medio de nodejs y express.
 
 Para inicializar el servidor se debe instalar la base de datos, la cual se encuentra en la carpeta "models". En el desarrollo se está usando MariaDB y MySql además como elección personal se decidió usar MySqlWorkbench para la creación y uso de la DB, pero puede usar el que mas prefiera. Una vez se haya instalado la DB puede inicializar el servidor desde la terminal usando "mysql.SERVER start".
-
-Después desde su editor de texto preferido puede instalar los diferentes node_modules que se encuentran indicados en el "package.json". Una vez hecho esto comenzar el servidor con "npx nodemon" desde la terminal del proyecto.
 
 En la carpeta del proyecto se encuentran otras carpetas, las cuales contienen archivos públicos para la API, archivos JS con los diferentes endpoints para cada ruta, y las vistas en .PUG que son renderizadas cuando se hacen llamados a diferentes endpoints.
 
